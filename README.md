@@ -7,8 +7,8 @@ A curated list of all the things I found helpful building my lab along with all 
 - [ESXi](#ESXi)
 - [Cisco 3750](#c3750)
 - [Dell R1950](#DellR1950)
-- [Ubiquiti EdgeRouter-X](Ubiquiti EdgeRouter-X)
-- [Ubiquiti UniFi Controller](Ubiquiti UniFi Controller)
+- [Ubiquiti EdgeRouter-X](#Ubiquiti EdgeRouter-X)
+- [Ubiquiti UniFi Controller](#Ubiquiti UniFi Controller)
 
 
 ## ESXi
