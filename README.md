@@ -15,6 +15,7 @@ A curated list of all the things I found helpful building my lab along with all 
 
 - [Node.js](https://github.com/sindresorhus/awesome-nodejs#readme) - no 1
 - [VMware KB VLAN](https://kb.vmware.com/s/article/1006628) - VMware KB article on how to configure Cisco switch ports for VLANs and Trunks to/from ESXi.
+- [Templates w/o templates](https://www.vladan.fr/how-to-create-a-nested-esxi-6-5-template/) - How to create "templates" in the free version of ESXi 6.5 using export since templates aren't available.
 
 
 ## c3750
