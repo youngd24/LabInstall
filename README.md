@@ -7,8 +7,8 @@ A curated list of all the things I found helpful building my lab along with all 
 - [ESXi](#ESXi)
 - [Cisco 3750](#c3750)
 - [Dell R1950](#DellR1950)
-- [Ubiquiti EdgeRouter-X](#Ubiquiti EdgeRouter-X)
-- [Ubiquiti UniFi Controller](#Ubiquiti UniFi Controller)
+- [Ubiquiti EdgeRouter-X](#UbiquitiEdgeRouter-X)
+- [Ubiquiti UniFi Controller](#UbiquitiUniFiController)
 
 
 ## ESXi
@@ -27,11 +27,11 @@ A curated list of all the things I found helpful building my lab along with all 
 - [BIOS Settings](https://www.thegeekstuff.com/2011/07/bios-cpu-vt-setting-for-vmware/) - BIOS Settings to enable VT-X so 64-bit VM's will work. You'll get an error message when you try to create a VM if this isn't configured.
 
 
-## Ubiquiti EdgeRouter-X
+## UbiquitiEdgeRouter-X
 
 -[1]() - no 1
 
 
-## Ubiquiti UniFi Controller
+## UbiquitiUniFiController
 
 -[1]() - no 1
