@@ -1,5 +1,5 @@
 # LabInstall
-A curated list of all the things I found helpful building my lab
+A curated list of all the things I found helpful building my lab along with all sorts of other stuff.
 
 
 ## Contents
@@ -12,6 +12,7 @@ A curated list of all the things I found helpful building my lab
 ## ESXi
 
 - [Node.js](https://github.com/sindresorhus/awesome-nodejs#readme) - no 1
+- [VMware KB VLAN](https://kb.vmware.com/s/article/1006628) - VMware KB article on how to configure Cisco switch ports for VLANs and Trunks to/from ESXi.
 
 
 ## c3750
