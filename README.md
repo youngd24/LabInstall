@@ -31,7 +31,7 @@ A curated list of all the things I found helpful building my lab along with all 
 ## UbiquitiEdgeRouter-X
 
 - [Renumbering Rules](https://help.ubnt.com/hc/en-us/articles/205232890-EdgeRouter-Reordering-Firewall-and-NAT-Rules) - Sometimes it's necessary to renumber ER-X rules to move them up or down in the order, this works.
-
+- [Hardening the ER-X](https://networkjutsu.com/hardening-edgerouter-lite-part-1/) - GREAT set of articles on how to configure and harden the ER-X
 
 ## UbiquitiUniFiController
 
