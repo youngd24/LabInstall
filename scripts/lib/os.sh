@@ -21,10 +21,10 @@ typeset -f getOS
 
 
 ################################################################################
-# NAME        : 
-# DESCRIPTION :
-# ARGS        :
-# RETURNS     :
+# NAME        : getOS
+# DESCRIPTION : Gets the name of the OS
+# ARGS        : N/A
+# RETURNS     : string(name)
 ################################################################################
 function getOS {
   UNAME=$(which uname)
