@@ -1,20 +1,6 @@
 #!/bin/bash
 ###############################################################################
 #
-# script_template.sh
-#
-# My basic shell script template, user over and over and over
-#
-###############################################################################
-
-DIRNAME=$(dirname $0)
-MYNAME=$(basename $0)
-LIBDIR="$DIRNAME/../lib"
-source "$LIBDIR/functions.sh"
-source "$LIBDIR/common.sh"
-
-###############################################################################
-DEBUG=""
 ###############################################################################
 
 
@@ -41,6 +27,4 @@ done
 
 debug "Logfile: $LOGFILE"
 echo "Script: $MYNAME started"
-
-
 echo "Script: $MYNAME done"
