@@ -56,7 +56,7 @@ WAN_FW_INT="eth3"           # The outside interface, usually eth0
 #
 ################################################################################
 ${vCmd} begin 
-${vCmd} firewall group network-group BOGONS description "BOGONS to block"
+${vCmd} set firewall group network-group BOGONS description "BOGONS to block"
 ${vCmd} commit
 ${vCmd} end
 
