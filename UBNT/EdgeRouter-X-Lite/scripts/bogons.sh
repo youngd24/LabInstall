@@ -12,8 +12,28 @@
 # USAGE:
 #
 ################################################################################
+#
+# STATUS: 
+#
+# VERY (very) under development still, DO NOT USE FOR REAL
+#
+################################################################################
+#
+# LOGICAL DESIGN
+#
+# 1) Check if BOGON network-group already exists
+#    a) If it does, remove it
+#    b) Else, create it
+#       - Default action drop
+#       - Make it as an early order rule, perhaps no 5
+# 2) Add BOGON nets to the network-group
+#
+# Things to consider:
+#   - Should we assume the basic setup wizard was run and use the WAN_IN rule?
+#
+################################################################################
 
-
+# Sample firewall commands
 #stig@ER-bgp-test# set firewall group network-group SPAMHAUS_DROP
 #stig@ER-bgp-test# commit
 #stig@ER-bgp-test# set firewall name WAN_IN rule 10 action drop
@@ -21,6 +41,26 @@
 #stig@ER-bgp-test# set firewall name WAN_IN rule 10 description "networks to drop from spamhaus.org list"
 #stig@ER-bgp-test# commit
 #stig@ER-bgp-test# save; exit
+
+# What it will have to do
+#/opt/vyatta/sbin/vyatta-cfg-cmd-wrapper begin
+#/opt/vyatta/sbin/vyatta-cfg-cmd-wrapper set firewall group network-group BOGON description BOGON Nets
+#/opt/vyatta/sbin/vyatta-cfg-cmd-wrapper set firewall group network-group BOGON network 0.0.0.0/8
+#/opt/vyatta/sbin/vyatta-cfg-cmd-wrapper set firewall group network-group BOGON network 10.0.0.0/8
+#/opt/vyatta/sbin/vyatta-cfg-cmd-wrapper set firewall group network-group BOGON network 100.64.0.0/10
+#/opt/vyatta/sbin/vyatta-cfg-cmd-wrapper set firewall group network-group BOGON network 127.0.0.0/8
+#/opt/vyatta/sbin/vyatta-cfg-cmd-wrapper set firewall group network-group BOGON network 169.254.0.0/16
+#/opt/vyatta/sbin/vyatta-cfg-cmd-wrapper set firewall group network-group BOGON network 172.16.0.0/12
+#/opt/vyatta/sbin/vyatta-cfg-cmd-wrapper set firewall group network-group BOGON network 192.0.0.0/24
+#/opt/vyatta/sbin/vyatta-cfg-cmd-wrapper set firewall group network-group BOGON network 192.0.2.0/24
+#/opt/vyatta/sbin/vyatta-cfg-cmd-wrapper set firewall group network-group BOGON network 192.168.0.0/16
+#/opt/vyatta/sbin/vyatta-cfg-cmd-wrapper set firewall group network-group BOGON network 192.18.0.0/15
+#/opt/vyatta/sbin/vyatta-cfg-cmd-wrapper set firewall group network-group BOGON network 198.51.100.0/24
+#/opt/vyatta/sbin/vyatta-cfg-cmd-wrapper set firewall group network-group BOGON network 203.0.113.0/24
+#/opt/vyatta/sbin/vyatta-cfg-cmd-wrapper set firewall group network-group BOGON network 224.0.0.0/4
+#/opt/vyatta/sbin/vyatta-cfg-cmd-wrapper set firewall group network-group BOGON network 240.0.0.0/4
+#/opt/vyatta/sbin/vyatta-cfg-cmd-wrapper commit
+#/opt/vyatta/sbin/vyatta-cfg-cmd-wrapper end
 
 ################################################################################
 #
@@ -66,24 +106,6 @@ ${vCmd} end
 exit 1
 
 
-#/opt/vyatta/sbin/vyatta-cfg-cmd-wrapper begin
-#/opt/vyatta/sbin/vyatta-cfg-cmd-wrapper set firewall group network-group BOGON description BOGON Nets
-#/opt/vyatta/sbin/vyatta-cfg-cmd-wrapper set firewall group network-group BOGON network 0.0.0.0/8
-#/opt/vyatta/sbin/vyatta-cfg-cmd-wrapper set firewall group network-group BOGON network 10.0.0.0/8
-#/opt/vyatta/sbin/vyatta-cfg-cmd-wrapper set firewall group network-group BOGON network 100.64.0.0/10
-#/opt/vyatta/sbin/vyatta-cfg-cmd-wrapper set firewall group network-group BOGON network 127.0.0.0/8
-#/opt/vyatta/sbin/vyatta-cfg-cmd-wrapper set firewall group network-group BOGON network 169.254.0.0/16
-#/opt/vyatta/sbin/vyatta-cfg-cmd-wrapper set firewall group network-group BOGON network 172.16.0.0/12
-#/opt/vyatta/sbin/vyatta-cfg-cmd-wrapper set firewall group network-group BOGON network 192.0.0.0/24
-#/opt/vyatta/sbin/vyatta-cfg-cmd-wrapper set firewall group network-group BOGON network 192.0.2.0/24
-#/opt/vyatta/sbin/vyatta-cfg-cmd-wrapper set firewall group network-group BOGON network 192.168.0.0/16
-#/opt/vyatta/sbin/vyatta-cfg-cmd-wrapper set firewall group network-group BOGON network 192.18.0.0/15
-#/opt/vyatta/sbin/vyatta-cfg-cmd-wrapper set firewall group network-group BOGON network 198.51.100.0/24
-#/opt/vyatta/sbin/vyatta-cfg-cmd-wrapper set firewall group network-group BOGON network 203.0.113.0/24
-#/opt/vyatta/sbin/vyatta-cfg-cmd-wrapper set firewall group network-group BOGON network 224.0.0.0/4
-#/opt/vyatta/sbin/vyatta-cfg-cmd-wrapper set firewall group network-group BOGON network 240.0.0.0/4
-#/opt/vyatta/sbin/vyatta-cfg-cmd-wrapper commit
-#/opt/vyatta/sbin/vyatta-cfg-cmd-wrapper end
 
 
 
