@@ -58,7 +58,12 @@ WAN_FW_INT="eth3"           # The outside interface, usually eth0
 ${vCmd} begin 
 ${vCmd} set firewall group network-group BOGONS description "BOGONS to block"
 ${vCmd} commit
+${vCmd} set firewall name $WAN_RULE rule $WAN_RULE_NO action drop
+${vCmd} set firewall name $WAN_RULE rule $WAL_RULE_NO source group network-group $BOGON_NAME
+${vCmd} set firewall name $WAN_RULE rule $WAN_RULE_NO description "BOGON nets"
+${vCmd} commit
 ${vCmd} end
+exit 1
 
 
 #/opt/vyatta/sbin/vyatta-cfg-cmd-wrapper begin
