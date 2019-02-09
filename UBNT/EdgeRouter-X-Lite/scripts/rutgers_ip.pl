@@ -31,9 +31,10 @@
 ################################################################################
 
 # The various ER-X (Vyatta) stuffz
-$vbash    = "/bin/vbash"
-$vpath    = "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
-$vwrapper = "/opt/vyatta/sbin/vyatta-cfg-cmd-wrapper"
+$base     = "/opt/vyatta";
+$vbash    = "/bin/vbash";
+$vpath    = "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin";
+$vwrapper = "/opt/vyatta/sbin/vyatta-cfg-cmd-wrapper";
 
 
 
