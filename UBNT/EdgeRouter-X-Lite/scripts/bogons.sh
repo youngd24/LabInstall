@@ -34,11 +34,11 @@
 ################################################################################
 
 # Sample firewall commands
-#stig@ER-bgp-test# set firewall group network-group SPAMHAUS_DROP
+#stig@ER-bgp-test# set firewall group network-group DROP
 #stig@ER-bgp-test# commit
 #stig@ER-bgp-test# set firewall name WAN_IN rule 10 action drop
-#stig@ER-bgp-test# set firewall name WAN_IN rule 10 source group network-group SPAMHAUS_DROP
-#stig@ER-bgp-test# set firewall name WAN_IN rule 10 description "networks to drop from spamhaus.org list"
+#stig@ER-bgp-test# set firewall name WAN_IN rule 10 source group network-group DROP
+#stig@ER-bgp-test# set firewall name WAN_IN rule 10 description "networks to drop"
 #stig@ER-bgp-test# commit
 #stig@ER-bgp-test# save; exit
 
