@@ -5,7 +5,7 @@
 #
 # Mounts the 2 partitions inside a Raspbian disk image file
 #
-# Darren Young [darren@yhlsecurity.com]
+# Darren Young <darren@yhlsecurity.com>
 #
 ################################################################################
 #
