@@ -42,6 +42,7 @@
 #   * Only works for Raspbian images that have 2 partitions in them.
 #   * Might have issues, was written at 3AM.
 #   * Convert tabs to spaces, my .vimrc didn't have it set.
+#   * Make it more dynamic, use the fdisk output to determine the partitions
 #
 ################################################################################
 
@@ -49,12 +50,12 @@
 ################################################################################
 #                                V A R I A B L E S 
 ################################################################################
-MYNAME=`basename $0`		# This name
-MNTBASE="/mnt/img"		# Base dir to mount up at
-IMG1="img1"			# The name of the first image in the file
-IMG2="img2"			# The name of the second image in the file
-IMG1DIR="$MNTBASE/$IMG1"	# Image 1 mount point
-IMG2DIR="$MNTBASE/$IMG2"	# Image 2 mount point
+MYNAME=`basename $0`        # This name
+MNTBASE="/mnt/img"          # Base dir to mount up at
+IMG1="img1"	                # The name of the first image in the file
+IMG2="img2"                 # The name of the second image in the file
+IMG1DIR="$MNTBASE/$IMG1"    # Image 1 mount point
+IMG2DIR="$MNTBASE/$IMG2"    # Image 2 mount point
 
 ################################################################################
 #                                    M A I N
