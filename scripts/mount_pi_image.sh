@@ -44,6 +44,7 @@
 #   * Convert tabs to spaces, my .vimrc didn't have it set.
 #   * Make it more dynamic, use the fdisk output to determine the partitions
 #   * Convert it to use getopt for args.
+#   * Get the multiplier (512) from the fdisk results.
 #
 ################################################################################
 
