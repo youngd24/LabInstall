@@ -43,6 +43,7 @@
 #   * Might have issues, was written at 3AM.
 #   * Convert tabs to spaces, my .vimrc didn't have it set.
 #   * Make it more dynamic, use the fdisk output to determine the partitions
+#   * Convert it to use getopt for args.
 #
 ################################################################################
 
