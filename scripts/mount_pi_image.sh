@@ -40,6 +40,7 @@
 # NOTES/TODO:
 #
 #   * Only works for Raspbian images that have 2 partitions in them.
+#   * Only tested with the 2018-11-13 Raspbian image.
 #   * Might have issues, was written at 3AM.
 #   * Convert tabs to spaces, my .vimrc didn't have it set.
 #   * Make it more dynamic, use the fdisk output to determine the partitions
